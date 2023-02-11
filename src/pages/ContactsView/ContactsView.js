@@ -6,6 +6,7 @@ import Search from 'components/Search/Search';
 import Phonebook from 'components/Phonebook/Phonebook';
 import Section from 'components/Section/Section';
 import Contacts from 'components/Contacts/Contacts';
+import { Box } from '@mui/material';
 
 const ContactsView = () => {
   const dispatch = useDispatch();
@@ -17,8 +18,14 @@ const ContactsView = () => {
   }, [dispatch]);
 
   return (
-    <main>
-      <Section title="Phonebook">
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
+      <Section title="Phonebook" style={{ border: '1px solid #494D5F' }}>
         <Phonebook />
       </Section>
       {isLoading && !error && <b>Request in progress...</b>}
@@ -26,7 +33,7 @@ const ContactsView = () => {
         <Search />
         <Contacts />
       </Section>
-    </main>
+    </Box>
   );
 };
 

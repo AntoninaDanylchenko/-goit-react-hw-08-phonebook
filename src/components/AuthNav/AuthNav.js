@@ -1,4 +1,5 @@
-import { ListItemButton, List, ListItem } from '@mui/material';
+import { List, ListItem } from '@mui/material';
+import { ColorLinkButton } from 'components/styled/styledMui';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,36 +7,14 @@ const AuthNav = () => {
   return (
     <List sx={{ display: 'flex' }}>
       <ListItem color="secondary">
-        <ListItemButton
-          component={NavLink}
-          to="/register"
-          color="inherit"
-          sx={{
-            [`&.active`]: {
-              backgroundColor: 'rgba(132,88,179, 0.3)',
-              color: 'neutral.main',
-              borderRadius: `8px`,
-            },
-          }}
-        >
+        <ColorLinkButton component={NavLink} to="/register" color="inherit">
           Register
-        </ListItemButton>
+        </ColorLinkButton>
       </ListItem>
       <ListItem>
-        <ListItemButton
-          component={NavLink}
-          to="/login"
-          color="inherit"
-          sx={{
-            [`&.active`]: {
-              backgroundColor: 'rgba(132,88,179, 0.3)',
-              color: 'neutral.main',
-              borderRadius: `8px`,
-            },
-          }}
-        >
+        <ColorLinkButton component={NavLink} to="/login" color="inherit">
           Log In
-        </ListItemButton>
+        </ColorLinkButton>
       </ListItem>
     </List>
   );

@@ -4,6 +4,7 @@ import AppBarComponent from './AppBarComponent';
 import { Suspense } from 'react';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/system';
+import { Container } from '@mui/material';
 
 const theme = createTheme({
   status: {
@@ -16,7 +17,7 @@ const theme = createTheme({
     },
     neutral: {
       main: '#e5eaf5',
-      contrastText: '#a28089',
+      contrastText: '#494D5F',
     },
   },
 });
@@ -26,7 +27,11 @@ export const Layout = () => {
     <ThemeProvider theme={theme}>
       <AppBarComponent position="static" />
       <Suspense fallback={null}>
-        <Outlet />
+        <main>
+          <Container maxWidth="lg" sx={{ pt: '32px' }}>
+            <Outlet />
+          </Container>
+        </main>
       </Suspense>
 
       <Toaster position="top-right" reverseOrder={false} />
