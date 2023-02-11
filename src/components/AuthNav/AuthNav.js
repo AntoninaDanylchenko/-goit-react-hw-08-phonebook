@@ -1,16 +1,43 @@
+import { ListItemButton, List, ListItem } from '@mui/material';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
 
 const AuthNav = () => {
   return (
-    <div>
-      <NavLink className={css.link} to="/register">
-        Register
-      </NavLink>
-      <NavLink className={css.link} to="/login">
-        Log In
-      </NavLink>
-    </div>
+    <List sx={{ display: 'flex' }}>
+      <ListItem color="secondary">
+        <ListItemButton
+          component={NavLink}
+          to="/register"
+          color="inherit"
+          sx={{
+            [`&.active`]: {
+              backgroundColor: 'rgba(132,88,179, 0.3)',
+              color: 'neutral.main',
+              borderRadius: `8px`,
+            },
+          }}
+        >
+          Register
+        </ListItemButton>
+      </ListItem>
+      <ListItem>
+        <ListItemButton
+          component={NavLink}
+          to="/login"
+          color="inherit"
+          sx={{
+            [`&.active`]: {
+              backgroundColor: 'rgba(132,88,179, 0.3)',
+              color: 'neutral.main',
+              borderRadius: `8px`,
+            },
+          }}
+        >
+          Log In
+        </ListItemButton>
+      </ListItem>
+    </List>
   );
 };
 export default AuthNav;
