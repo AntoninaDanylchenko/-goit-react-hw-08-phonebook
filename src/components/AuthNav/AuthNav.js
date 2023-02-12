@@ -8,7 +8,7 @@ const AuthNav = () => {
     <List sx={{ display: 'flex' }}>
       <ListItem color="secondary">
         <ColorLinkButton component={NavLink} to="/register" color="inherit">
-          Register
+          Sing Up
         </ColorLinkButton>
       </ListItem>
       <ListItem>

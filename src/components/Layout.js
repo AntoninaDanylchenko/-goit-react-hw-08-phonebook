@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import AppBarComponent from './AppBarComponent';
 import { Suspense } from 'react';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/system';
 import { Container } from '@mui/material';
+import { Toaster } from 'react-hot-toast';
 
 const theme = createTheme({
   status: {
@@ -33,7 +33,6 @@ export const Layout = () => {
           </Container>
         </main>
       </Suspense>
-
       <Toaster position="top-right" reverseOrder={false} />
     </ThemeProvider>
   );

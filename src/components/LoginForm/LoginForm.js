@@ -35,7 +35,7 @@ const LoginForm = () => {
     >
       <StyledInput
         label="Email"
-        id="standard-search"
+        id="standard"
         variant="standard"
         type="email"
         name="email"
@@ -44,7 +44,7 @@ const LoginForm = () => {
       />
       <StyledInput
         label="Password"
-        id="standard-search"
+        id="standard-adornment-password"
         variant="standard"
         type="password"
         name="password"

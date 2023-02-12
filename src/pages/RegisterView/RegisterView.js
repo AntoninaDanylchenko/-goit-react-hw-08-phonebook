@@ -1,11 +1,17 @@
 import RegisterForm from 'components/RegisterForm/RegisterForm';
 import Section from 'components/Section/Section';
+import { Helmet } from 'react-helmet';
 
 const RegisterView = () => {
   return (
-    <Section title="Registration">
-      <RegisterForm />
-    </Section>
+    <>
+      <Helmet>
+        <title>register</title>
+      </Helmet>
+      <Section title="Sing Up">
+        <RegisterForm />
+      </Section>
+    </>
   );
 };
 

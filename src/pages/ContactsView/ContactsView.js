@@ -7,6 +7,8 @@ import Phonebook from 'components/Phonebook/Phonebook';
 import Section from 'components/Section/Section';
 import Contacts from 'components/Contacts/Contacts';
 import { Box } from '@mui/material';
+import { LinearIndeterminate } from 'components/Loader/Loader';
+import { Helmet } from 'react-helmet';
 
 const ContactsView = () => {
   const dispatch = useDispatch();
@@ -18,22 +20,27 @@ const ContactsView = () => {
   }, [dispatch]);
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-      }}
-    >
-      <Section title="Phonebook" style={{ border: '1px solid #494D5F' }}>
-        <Phonebook />
-      </Section>
-      {isLoading && !error && <b>Request in progress...</b>}
-      <Section title="Contacts">
-        <Search />
-        <Contacts />
-      </Section>
-    </Box>
+    <>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <Section title="Phonebook">
+          <Phonebook />
+        </Section>
+        <Section title="Contacts">
+          <Search />
+          {isLoading && !error && <LinearIndeterminate />}
+          <Contacts />
+        </Section>
+      </Box>
+    </>
   );
 };
 

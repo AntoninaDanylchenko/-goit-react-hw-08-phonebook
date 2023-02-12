@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { ColorButton, StyledInput } from 'components/styled/styledMui';
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selector';
@@ -20,7 +21,7 @@ const Phonebook = () => {
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     alertContact.length
-      ? alert(`${name} is already in contacts`)
+      ? toast.error(`${name} is already in contacts`)
       : dispatch(addContact({ name, number: phone }));
 
     reset();
@@ -72,8 +73,8 @@ const Phonebook = () => {
       <ColorButton
         sx={{ width: '18ch', ml: 'auto', mr: 'auto' }}
         type="submit"
-        bgColor="rgba(132, 88, 179, 0.5)"
-        textColor="#fff"
+        // bgColor="rgba(132, 88, 179, 0.5)"
+        // textColor="#fff"
       >
         Add contact
       </ColorButton>

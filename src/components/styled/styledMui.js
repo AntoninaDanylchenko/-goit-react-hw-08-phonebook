@@ -1,6 +1,9 @@
 import { Button, ListItemButton, TextField, styled } from '@mui/material';
 
 export const ColorLinkButton = styled(ListItemButton)(() => ({
+  width: '100px',
+  display: 'flex',
+  justifyContent: 'center',
   '&:hover': {
     borderRadius: `8px`,
     backgroundColor: 'rgba(132, 88, 179, 0.3)',
