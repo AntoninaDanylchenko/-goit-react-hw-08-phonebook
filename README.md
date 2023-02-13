@@ -1,5 +1,5 @@
 
-# React homework template
+## React template
 
 This project was created with the help of
 [Create React App](https://github.com/facebook/create-react-app). To familiarize yourself with the documentation
