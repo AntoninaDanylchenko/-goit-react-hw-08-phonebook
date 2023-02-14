@@ -8,7 +8,7 @@ This project was created with the help of
 ## About project
 
 
-The project is written on React Redux. Works with the backend for authorization and saving, deleting and correcting contacts. (https://connections-api.herokuapp.com/docs/)
+The project is written on React Redux. Works with the backend for authorization and saving, deleting and editing contacts. (https://connections-api.herokuapp.com/docs/)
 
 
 The project uses the React Router library.
