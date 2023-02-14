@@ -1,4 +1,11 @@
-import { Button, ListItemButton, TextField, styled } from '@mui/material';
+import {
+  Button,
+  Input,
+  InputLabel,
+  ListItemButton,
+  TextField,
+  styled,
+} from '@mui/material';
 
 export const ColorLinkButton = styled(ListItemButton)(() => ({
   width: '100px',
@@ -28,17 +35,21 @@ export const ColorButton = styled(Button)(() => ({
   },
 }));
 
-export const StyledInput = styled(TextField)({
+export const StyledInput = styled(Input)({
   marginBottom: '32px',
-  '& label.Mui-focused': {
-    color: '#8458B3',
-  },
-  '& .MuiInput-underline:after': {
+  '&.MuiInput-underline:after': {
     borderBottomColor: '#8458B3',
   },
-  '& .MuiOutlinedInput-root': {
+
+  '&.MuiOutlinedInput-root': {
     '&.Mui-focused fieldset': {
       borderColor: '#8458B3',
     },
+  },
+});
+
+export const StyledInputLable = styled(InputLabel)({
+  '&.Mui-focused': {
+    color: '#8458B3',
   },
 });

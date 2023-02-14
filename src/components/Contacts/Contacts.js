@@ -33,8 +33,6 @@ const Contacts = () => {
           <ColorButton
             sx={{ width: '8ch', fontSize: '12px' }}
             type="button"
-            // bgColor="rgba(132, 88, 179, 0.5)"
-            // textColor="#fff"
             onClick={() => onDelContact(id)}
           >
             Delete
